@@ -1,7 +1,9 @@
 # fft_lcd
 
-Prerequsites
+Prerequsites toolchain
 https://github.com/kendryte
+
+Test of HW FFT with Kendryte K210 / Sipeed M1 dock
 
 build
 cmake .. -DPROJ=fft_lcd -DTOOLCHAIN=/opt/kendryte-toolchain/bin && make
