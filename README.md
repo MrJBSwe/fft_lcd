@@ -14,3 +14,5 @@ sudo python3 kflash.py -p /dev/ttyUSB0 fft_lcd.bin
 Specs
 http://dl.sipeed.com/MAIX/HDK/
 
+Demo
+https://www.youtube.com/watch?v=HvBVj-QgaB8
