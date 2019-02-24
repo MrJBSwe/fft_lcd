@@ -150,13 +150,14 @@ int main(void)
         {
             hard_power[i] = sqrt(data_hard[i].real * data_hard[i].real + data_hard[i].imag * data_hard[i].imag);
 
-            hard_power[i] = 10*log(2*hard_power[i]/FFT_N);
+            //Convert to dBFS
+            hard_power[i] = 20*log(2*hard_power[i]/FFT_N);
 
             if( hard_power[i]>pmax)
                 pmax = hard_power[i];
         }
 
-        update_image( hard_power, pmax, g_lcd_gram,  RED, BLACK  );
+        update_image( hard_power, 140 /*MAX range dBFS*/, g_lcd_gram,  RED, BLACK  );
         lcd_draw_picture(0, 0, LCD_X_MAX, LCD_Y_MAX, g_lcd_gram);
 
     }
