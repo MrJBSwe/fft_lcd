@@ -1,6 +1,6 @@
 # fft_lcd
 
-Prerequsites toolchain
+Prerequisites toolchain
 https://github.com/kendryte
 
 Test of HW FFT with Kendryte K210 / Sipeed M1 dock
