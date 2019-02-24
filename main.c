@@ -187,7 +187,7 @@ update_image( float* hard_power, float pw_max, uint32_t* pImage, uint32_t color,
             h[i] = 0;
     }
 
-    for( i=0; i<53; ++i)
+    for( i=0; i<53; ++i)  // 53* 38640/512 => ~4000Hz
     {
         x=i*3;
         for( int y=0; y<120; ++y)
