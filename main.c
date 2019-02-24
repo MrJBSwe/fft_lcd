@@ -145,10 +145,12 @@ int main(void)
             data_hard[2 * i + 1].real = output_data->R2 ;
         }
 
-        float pmax=1000;
+        float pmax=10;
         for (i = 0; i < FFT_N; i++)
         {
-            hard_power[i] = sqrt(data_hard[i].real * data_hard[i].real + data_hard[i].imag * data_hard[i].imag) * 2;
+            hard_power[i] = sqrt(data_hard[i].real * data_hard[i].real + data_hard[i].imag * data_hard[i].imag);
+
+            hard_power[i] = 10*log(2*hard_power[i]/FFT_N);
 
             if( hard_power[i]>pmax)
                 pmax = hard_power[i];
@@ -176,7 +178,7 @@ update_image( float* hard_power, float pw_max, uint32_t* pImage, uint32_t color,
 
     for(int i=0; i<80; ++i)
     {
-        h[i]=120*(hard_power[i]-20)/pw_max;
+        h[i]=120*(hard_power[i])/pw_max;
 
         if( h[i]>120)
             h[i] = 120;
